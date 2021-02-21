@@ -28,5 +28,6 @@ pip install scikit_learn
 git clone https://github.com/nikhil-garg/EMG_exp.git
 cd EMG_exp
 
+python baseline_exploration.py 
 python experiment_exploration.py --log_file_path $OUTDIR
 
