@@ -22,7 +22,6 @@ pip install Brian2
 pip install scikit_plot
 pip install Nni
 pip install scikit_learn
-pip install scikitplot
 
 cd ..
 
