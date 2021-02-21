@@ -35,17 +35,17 @@ def encode(args):
     # pwd = os. getcwd()
 
     if args.dataset == "roshambo":
-        data_dir = "../EMG/dataset/Roshambo/"
+        data_dir = "dataset/Roshambo/"
         classes = ["rock", "paper", "scissor"]
         classes_dict = {"rock": 0, "paper": 1, "scissor": 2}
         classes_inv = {v: k for k, v in classes_dict.items()}
     elif args.dataset == "5_class":
-        data_dir = "../EMG/dataset/Gesture_5_class/"
+        data_dir = "dataset/Gesture_5_class/"
         classes = ["pinky", "elle", "yo", "index", "thumb"]
         classes_dict = {"pinky": 0, "elle": 1, "yo": 2, "index": 3, "thumb": 4}
         classes_inv = {v: k for k, v in classes_dict.items()}
     elif args.dataset == "pinch":
-        data_dir = "../EMG/dataset/Pinch/"
+        data_dir = "dataset/Pinch/"
         classes = ["Pinch1", "Pinch2", "Pinch3", "Pinch4"]
         classes_dict = {"Pinch1": 0, "Pinch2": 1, "Pinch3": 2, "Pinch4": 3}
         classes_inv = {v: k for k, v in classes_dict.items()}
@@ -252,7 +252,7 @@ def encode(args):
     spike_times_train_up = np.array(spike_times_train_up)
     spike_times_train_up = np.array(spike_times_train_up)
 
-    file_path = "../EMG/dataset/"
+    file_path = "dataset/"
     file_name = args.encoded_data_file_prefix + str(args.dataset) + str(args.encode_thr_up) + str(
         args.encode_thr_dn) + str(args.encode_refractory) + str(args.encode_interpfact)+ str(args.fold) + ".npz"
     # np.savez(file_path, X_EMG_Train=X_EMG_Train, Y_EMG_Train=Y_EMG_Train,X_EMG_Test=X_EMG_Test,Y_EMG_Test=Y_EMG_Test,spike_times_train_up = spike_times_train_up ,spike_times_train_dn = spike_times_train_dn,spike_times_test_up = spike_times_test_up ,spike_times_test_dn = spike_times_test_dn)
