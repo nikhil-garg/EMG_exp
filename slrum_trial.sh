@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=def-drod1901
-#SBATCH --time=2-:0:0
+#SBATCH --time=2-0:0:0
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=128G
 
