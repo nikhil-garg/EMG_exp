@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=def-drod1901
-#SBATCH --time=0-0:10:0
+#SBATCH --time=0-1:0:0
 #SBATCH --cpus-per-task=1 
 #SBATCH --mem=128G
 
@@ -23,7 +23,6 @@ pip install matplotlib
 pip install seaborn
 pip install Brian2
 pip install scikit_plot
-pip install Nni
 pip install scikit_learn
 
 git clone https://github.com/nikhil-garg/EMG_exp.git

@@ -37,7 +37,7 @@ from utilis import *
 from args_emg import args as my_args
 import pandas as pd
 from itertools import product
-import nni
+# import nni
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.svm import LinearSVC
 
@@ -440,7 +440,7 @@ def evaluate_reservoir(args):
     nbsynapses = len(m.S)
     firing_rate = avgOutputFiringRate / Hz
 
-    nni.report_final_result(svm_score)
+    # nni.report_final_result(svm_score)
 
     return lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input, firing_rate, nbsynapses, nbneurons
 
@@ -452,14 +452,14 @@ if __name__ == '__main__':
     print(args.__dict__)
 
 
-    params = nni.get_next_parameter()
+    # params = nni.get_next_parameter()
 
-    args.init_tau_min = params['tau_min']
-    args.init_tau_max = args.init_tau_min
-    args.init_thr_min = params['thr_min']
-    args.init_thr_max = args.init_thr_min
-    args.excitatoryProb = params['excitatoryProb']
-    args.adaptiveProb = params['adaptiveProb']
+    # args.init_tau_min = params['tau_min']
+    # args.init_tau_max = args.init_tau_min
+    # args.init_thr_min = params['thr_min']
+    # args.init_thr_max = args.init_thr_min
+    # args.excitatoryProb = params['excitatoryProb']
+    # args.adaptiveProb = params['adaptiveProb']
 
 
     logging.basicConfig(level=logging.DEBUG)
