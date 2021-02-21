@@ -3,8 +3,11 @@
 #SBATCH --time=0-0:10:0
 #SBATCH --cpus-per-task=1 
 #SBATCH --mem=128G
+
+
 OUTDIR=~/project/out/$SLURM_JOB_ID
 mkdir -p $OUTDIR
+
 cd $SLURM_TMPDIR
 
 module load python/3.7
@@ -22,8 +25,6 @@ pip install Brian2
 pip install scikit_plot
 pip install Nni
 pip install scikit_learn
-
-cd ..
 
 git clone https://github.com/nikhil-garg/EMG_exp.git
 cd EMG_exp
