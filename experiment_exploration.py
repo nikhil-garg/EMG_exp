@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
 	parameters = dict(
 		path_res_connections = ['Corr_Cr_2048_I_50_R_6.txt','Corr_Cr_2048_I_50_R_3.txt']
-		,path_input_connections = ['inp_Cr_2048_I_50_R_3', 'inp_Cr_2048_I_50_R_6']
+		,path_input_connections = ['inp_Cr_2048_I_50_R_3.txt', 'inp_Cr_2048_I_50_R_6.txt']
 		, memoryless=[True]
 		,win=['1.0*rand()']
 		,input_connection_density=[0.15]
