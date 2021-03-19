@@ -76,25 +76,24 @@ if __name__ == '__main__':
 		,thr_init = [1]
 		,thr_init_dev = [0.5]
 		,refractory=[1]
-        ,learning_algorithm=['critical','none']
-        ,topology = ['random', 'small-world']
+        ,learning_algorithm=['stdp']
+        ,topology = ['random']
         ,lr_critical = [0.1]
         ,macrocolumnShape=[[2,2,2]]
         , minicolumnShape=[[4,4,2]]
         ,connection_density=[0.3]
-        ,adaptiveProb=[0.2,0.4,0.6,0.8,1]
+        ,adaptiveProb=[1]
         ,excitatoryProb=[0.8]
         ,noise=[0]
-        ,stdp_tau = [25]
-        ,stdp_apre = [1e-3]
+        ,stdp_tau = [25,50,75,100,150,200]
+        ,stdp_apre = [1e-4,1e-3,1e-2]
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
-		,fold=[2]
     )
 	param_values = [v for v in parameters.values()]
 
-	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin, args.fold in product(*param_values):
+	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin in product(*param_values):
 
 			# Fix the seed of all random number generator
 		seed = int(args.seed)

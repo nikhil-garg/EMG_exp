@@ -69,12 +69,12 @@ if __name__ == '__main__':
 		dataset=['roshambo','5_class']
 		,memoryless=[True]
 		,win=['1.0 * rand()']
-		,input_connection_density=[0.15]
+		,input_connection_density=[0.05,0.1,0.15,0.2,0.25,0.3]
 		,tstart = [0]
 		,tlast = [1800]
 		,freeze_time_ms = [0]
 		,thr_init = [1]
-		,thr_init_dev = [0,0.25,0.5,0.75,1]
+		,thr_init_dev = [0.5]
 		,refractory=[1]
         ,learning_algorithm=['critical','none']
         ,topology = ['random', 'small-world']
@@ -90,11 +90,10 @@ if __name__ == '__main__':
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
-		,fold=[3]
     )
 	param_values = [v for v in parameters.values()]
 
-	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin, args.fold in product(*param_values):
+	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin in product(*param_values):
 
 			# Fix the seed of all random number generator
 		seed = int(args.seed)
