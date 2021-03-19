@@ -1,0 +1,60 @@
+sbatch slrum_trial_th_var_v1.sh --log_file_path $OUTDIR
+sbatch slrum_trial_th_var_v2.sh --log_file_path $OUTDIR
+sbatch slrum_trial_th_var_v3.sh --log_file_path $OUTDIR
+sbatch slrum_trial_th_var_v4.sh --log_file_path $OUTDIR
+sbatch slrum_trial_th_var_v5.sh --log_file_path $OUTDIR
+sbatch slrum_trial_th_var_v6.sh --log_file_path $OUTDIR
+
+sbatch slrum_trial_dw_var_v1.sh --log_file_path $OUTDIR
+sbatch slrum_trial_dw_var_v2.sh --log_file_path $OUTDIR
+sbatch slrum_trial_dw_var_v3.sh --log_file_path $OUTDIR
+sbatch slrum_trial_dw_var_v4.sh --log_file_path $OUTDIR
+sbatch slrum_trial_dw_var_v5.sh --log_file_path $OUTDIR
+sbatch slrum_trial_dw_var_v6.sh --log_file_path $OUTDIR
+
+sbatch slrum_trial_v1.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v2.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v3.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v4.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v5.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v6.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v7.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v8.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v9.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v10.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v11.sh --log_file_path $OUTDIR
+sbatch slrum_trial_v12.sh --log_file_path $OUTDIR
+
+
+sbatch slrum_trial_amp_var_v1.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v2.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v3.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v4.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v5.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v6.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v7.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v8.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v9.sh --log_file_path $OUTDIR
+
+sbatch slrum_trial_g_var_v1.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v2.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v3.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v4.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v5.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v6.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v7.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v8.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v9.sh --log_file_path $OUTDIR
+sbatch slrum_trial_g_var_v10.sh --log_file_path $OUTDIR
+
+
+sbatch slrum_trial_amp_var_v1.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v2.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v3.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v8.sh --log_file_path $OUTDIR
+sbatch slrum_trial_amp_var_v9.sh --log_file_path $OUTDIR
+
+image_test_filtered = (image_test_filtered/255-0.1308)/0.3088
+image_train_filtered = (image_train_filtered/255-0.1308)/0.3088
+image_test_filtered = 255*(image_test_filtered-image_test_filtered.min())/(image_test_filtered.max()-image_test_filtered.min())
+image_train_filtered = 255*(image_train_filtered-image_train_filtered.min())/(image_train_filtered.max()-image_train_filtered.min())

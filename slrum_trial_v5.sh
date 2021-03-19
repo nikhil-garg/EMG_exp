@@ -30,5 +30,5 @@ git clone https://github.com/nikhil-garg/EMG_exp.git
 cd EMG_exp
 
 python baseline_exploration.py 
-python experiment_exploration_v5.py --log_file_path $OUTDIR --seed 50
+python experiment_exploration_v5.py --log_file_path $OUTDIR 
 
