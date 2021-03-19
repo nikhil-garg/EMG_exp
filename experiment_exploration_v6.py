@@ -23,10 +23,7 @@ if __name__ == '__main__':
 	logging.basicConfig(level=logging.DEBUG)
 	logger = logging.getLogger(__name__)
 
-	# Fix the seed of all random number generator
-	seed = 50
-	random.seed(seed)
-	np.random.seed(seed)
+
 
 	df = pd.DataFrame({"memoryless":[],
 						"win":[],
@@ -57,6 +54,7 @@ if __name__ == '__main__':
                         "nbsynapses":[],
                         "adaptiveProb":[],
                         "excitatoryProb":[],
+                        "noise":[],
                         "firing_rate":[],
                         "lda_score":[],
                         "lda_score_input":[],
@@ -68,57 +66,51 @@ if __name__ == '__main__':
                          })
 
 	parameters = dict(
-		path_res_connections = ['Corr_Cr_2048_I_50_R_6.txt','Corr_Cr_2048_I_50_R_3.txt']
-		,path_input_connections = ['inp_Cr_2048_I_50_R_3.txt', 'inp_Cr_2048_I_50_R_6.txt']
-		, memoryless=[True]
-		,win=['1.0']
+		dataset=['roshambo','5_class']
+		,memoryless=[True]
+		,win=['1.0 * rand()']
 		,input_connection_density=[0.15]
-		,tstart = [600]
-		,tlast = [1200]
+		,tstart = [0]
+		,tlast = [1800]
 		,freeze_time_ms = [0]
-		# ,tau_min = [0]
-		,tau_max = [25, 50, 75, 100, 125, 150]
-		# ,thr_min = [1]
-		,thr_max = [1,5,10,20,30,40,50]
+		,thr_init = [1]
+		,thr_init_dev = [0,0.25,0.5,0.75,1]
 		,refractory=[1]
-        ,learning_algorithm=['none']
-        ,topology = ['custom']
+        ,learning_algorithm=['critical','none']
+        ,topology = ['random', 'small-world']
         ,lr_critical = [0.1]
-        ,macrocolumnShape=[[4,4,4]]
-        # , macrocolumnShape=[[2, 1, 1], [2, 3, 4], [2,4,4]]
+        ,macrocolumnShape=[[2,2,2]]
+        , minicolumnShape=[[4,4,2]]
         ,connection_density=[0.3]
-        ,adaptiveProb=[1, 0.8, 0.6, 0.4, 0]
-        ,excitatoryProb=[1, 0.8, 0.6]
+        ,adaptiveProb=[1]
+        ,excitatoryProb=[0.8]
+        ,noise=[0]
         ,stdp_tau = [25]
         ,stdp_apre = [1e-3]
 		,wmax = [1]
-		,winitmax=[1]
-		,winitmin=[1]
-		,fold=[1]
+		,winitmax=[0.25]
+		,winitmin=[0]
+		,fold=[3]
     )
 	param_values = [v for v in parameters.values()]
 
-	for args.path_res_connections,args.path_input_connections, args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_tau_max, args.init_thr_max,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin, args.fold in product(*param_values):
+	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin, args.fold in product(*param_values):
 
-
-		args.init_tau_min = args.init_tau_max
-		args.init_thr_min = args.init_thr_max
-
-		args.experiment_name = str(args.path_res_connections)+str(args.path_input_connections)+str(args.memoryless_flag)+str(args.input_connection_density)+str(args.tstart)+str(args.tlast)+str(args.learning_algorithm) + str(args.winitmax)+str(args.winitmin)+str(args.connection_density)+str(args.wmax)+str(args.refractory)+str(args.fold)
+			# Fix the seed of all random number generator
+		seed = int(args.seed)
+		random.seed(seed)
+		np.random.seed(seed)
+		# args.experiment_name = str(args.path_res_connections)+str(args.path_input_connections)+str(args.memoryless_flag)+str(args.input_connection_density)+str(args.tstart)+str(args.tlast)+str(args.learning_algorithm) + str(args.winitmax)+str(args.winitmin)+str(args.connection_density)+str(args.wmax)+str(args.refractory)+str(args.fold)
 		lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input, firing_rate, nbsynapses, nbneurons = evaluate_reservoir(args)
 		df = df.append({ "dataset":args.dataset,
-						 "path_res_connections":args.path_res_connections,
-						 "path_input_connections":args.path_input_connections,
 						 "memoryless":args.memoryless_flag,
 						 "win" :args.win,
 						 "input_connection_density":args.input_connection_density,
 						 "tstart":args.tstart,
 						 "tlast" : args.tlast,
 						 "freeze_time_ms":args.freeze_time_ms,
-						 "tau_min":args.init_tau_min,
-						 "tau_max":args.init_tau_max,
-						 "thr_min":args.init_thr_min,
-						 "thr_max":args.init_thr_max,
+						 "thr":args.init_thr,
+						 "thr_dev":args.init_thr_dev,
 						 "refractory" : args.refractory,
 						 "learning_algorithm":args.learning_algorithm,
 						 "macrocolumnShape":args.macrocolumnShape,
@@ -137,6 +129,7 @@ if __name__ == '__main__':
 		                 "nbsynapses":nbsynapses,
 		                 "adaptiveProb":args.adaptiveProb,
 		                 "excitatoryProb":args.excitatoryProb,
+		                 "noise":args.noise,
 		                 "firing_rate":firing_rate,
 		                 "lda_score":lda_score,
 		                 "lda_score_input":lda_score_input,
@@ -144,7 +137,8 @@ if __name__ == '__main__':
 		                 "svm_linear_score_input":svm_linear_score_input,
 		                 "svm_rbf_score":svm_score,
 						 "svm_rbf_score_input":svm_score_input,
-						 "fold":args.fold
+						 "fold":args.fold,
+						 "seed":args.seed
 		                 },ignore_index=True)
 		timestr = time.strftime("%Y%m%d-%H%M%S")
 		log_file_name = 'accuracy_log'+'.csv'

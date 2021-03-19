@@ -257,7 +257,7 @@ def encode(args):
         args.encode_thr_dn) + str(args.encode_refractory) + str(args.encode_interpfact)+ str(args.fold) + ".npz"
     # np.savez(file_path, X_EMG_Train=X_EMG_Train, Y_EMG_Train=Y_EMG_Train,X_EMG_Test=X_EMG_Test,Y_EMG_Test=Y_EMG_Test,spike_times_train_up = spike_times_train_up ,spike_times_train_dn = spike_times_train_dn,spike_times_test_up = spike_times_test_up ,spike_times_test_dn = spike_times_test_dn)
     # np.savez('/home/turing/Desktop/EMG/EMG_dataset_with_spike_time.npz', X_EMG_Train=X_EMG_Train, Y_EMG_Train=Y_EMG_Train,X_EMG_Test=X_EMG_Test,Y_EMG_Test=Y_EMG_Test,spike_times_train_up = spike_times_train_up ,spike_times_train_dn = spike_times_train_dn,spike_times_test_up = spike_times_test_up ,spike_times_test_dn = spike_times_test_dn)
-    np.savez(
+    np.savez_compressed(
         file_path + file_name,
         X_EMG_Train=X_EMG_Train,
         Y_EMG_Train=Y_EMG_Train,

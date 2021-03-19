@@ -173,28 +173,28 @@ def args():
         help="Proportion of adaptive neurons in reservoir population" "e.g. 0.1, 0.9 ",
     )
     parser.add_argument(
-        "--init_tau_min",
-        default=10,
+        "--init_tau",
+        default=25,
         type=float,
         help="Minimum value of reservoir neuron leak time constant  ",
     )
     parser.add_argument(
-        "--init_tau_max",
-        default=20,
+        "--init_tau_dev",
+        default=0,
         type=float,
-        help="Maximum value of reservoir neuron leak time constant ",
+        help="Deviation in the tau(between 0 and 1) ",
     )
     parser.add_argument(
-        "--init_thr_min",
+        "--init_thr",
         default=1,
         type=float,
-        help="Maximum value of reservoir neuron initial threshold ",
+        help="Mean value of reservoir neuron initial threshold ",
     )
     parser.add_argument(
-        "--init_thr_max",
-        default=1.5,
+        "--init_thr_dev",
+        default=0,
         type=float,
-        help="Maximum value of reservoir neuron initial threshold ",
+        help="Deviation in initial threshold (between 0 and 1) ",
     )
     parser.add_argument(
         "--refractory",
@@ -235,6 +235,19 @@ def args():
         default=2000,
         type=float,
         help="Time point till which the simulation has to be run",
+    )
+
+    parser.add_argument(
+        "--noise",
+        default=0,
+        type=float,
+        help="Spontaneous activity in reservoir",
+    )
+    parser.add_argument(
+        "--seed",
+        default=50,
+        type=float,
+        help="Seed for random number generation",
     )
 
     parser.add_argument(

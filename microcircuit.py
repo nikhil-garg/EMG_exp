@@ -329,7 +329,7 @@ def createCriticalSynapses(G):
         'pre_plasticity': '''
             cbf_pre = c_out_tot_pre                                                                                                       # Store current estimate of the target branching factor
             e = (c_out_ref_pre - c_out_tot_pre)                                                                                           # Calculate the error on the target contribution
-            w = clip(w + int(plastic) * alpha * (e / N_outgoing) * exp(-(t - lastspike_post)/tau_pre) * int(ntype_pre > 0), -1, wmax)    # Update postsynaptic weights to reduce the error, with ponderation scheme to favor recently active postsynaptic neurons
+            w = clip(w + int(plastic) * alpha * (e / N_outgoing) * exp(-(t - lastspike_post)/tau_pre) * int(ntype_pre > 0), 0, wmax)    # Update postsynaptic weights to reduce the error, with ponderation scheme to favor recently active postsynaptic neurons
         ''',
         # Step 5: Reset state variables to accumulate contributions for another interspike interval
         'pre_reset': '''
@@ -379,7 +379,7 @@ class Microcircuit(object):
     def __init__(self, connectivity='small-world',
                  macrocolumnShape=[2, 2, 1], minicolumnShape=[5, 5, 1], minicolumnSpacing=1460 * um,
                  neuronSpacing=40 * um, p_max=0.1, srate=0.0 * Hz, excitatoryProb=0.8, delay=0.0 * ms,
-                 withSTDP=False, soft_reset=False, adaptiveProbab=1, stdp_tau=10 , stdp_apre=1e-4, wmax=1, wmin=0.01,
+                 withSTDP=False, soft_reset=False, adaptiveProbab=1, stdp_tau=10 , stdp_apre=1e-4, wmax=1, wmin=0.00,
                  winitmin=0.01, winitmax=1, refractory=1, connectivity_matrix=np.zeros((100, 100))):
 
         self.__dict__.update(macrocolumnShape=macrocolumnShape, minicolumnShape=minicolumnShape,

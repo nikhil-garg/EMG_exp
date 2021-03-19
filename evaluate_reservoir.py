@@ -74,7 +74,7 @@ def evaluate_reservoir(args):
     memoryless = args.memoryless_flag
     p_max = args.connection_density
     adaptiveProb = args.adaptiveProb
-    noise = 0
+    noise = args.noise
     excitatoryProb = args.excitatoryProb
     stdp_tau = args.stdp_tau
     stdp_apre = args.stdp_apre
@@ -116,8 +116,7 @@ def evaluate_reservoir(args):
                      minicolumnShape=args.minicolumnShape,
                      p_max=p_max, srate=noise * Hz, excitatoryProb=excitatoryProb, delay=' 0*ms',
                      withSTDP=withSTDP, adaptiveProbab=adaptiveProb, stdp_tau=10, stdp_apre=1e-4, wmax=args.wmax,
-                     wmin=args.wmin, winitmin=args.winitmin, winitmax=args.winitmax, refractory=args.refractory, 
-                     connectivity_matrix = reservoir_connection_matrix)
+                     wmin=args.wmin, winitmin=args.winitmin, winitmax=args.winitmax, refractory=args.refractory)
 
     # Configure CRITICAL learning rule
     targetCbf = args.cbf
@@ -126,14 +125,14 @@ def evaluate_reservoir(args):
     m.S.wmax = args.wmax
     m.S.freeze_time_ms = args.freeze_time_ms
 
-    tau_min = args.init_tau_min * ms
-    tau_max = args.init_tau_max * ms
-    thr_min = args.init_thr_min
-    thr_max = args.init_thr_max
+    # tau = args.init_tau * ms
+    # tau_dev = args.init_tau_dev
+    thr = args.init_thr
+    thr_dev = args.init_thr_dev
 
-    m.G.tau = 'tau_min + (tau_max-tau_min)*rand()'
-    m.G.vt0 = 'thr_min + (thr_max-thr_min)*rand()'
-    m.G.vt = 'thr_min + (thr_max-thr_min)*rand()'
+    # m.G.tau = 'tau*(1-tau_dev) + (2*tau_dev*tau*rand())'
+    m.G.vt0 = 'thr*(1-thr_dev) + (2*thr_dev*thr*rand())'
+    m.G.vt = 'thr*(1-thr_dev) + (2*thr_dev*thr*rand())'
     m.G.v0 = '0'
     # Define the inputs to the microcircuit
 
@@ -143,10 +142,10 @@ def evaluate_reservoir(args):
 	                                                c_in_tot_post += w * int(not_refractory_post)''')
 
 
-    sources, targets = input_connection_matrix.nonzero()
-    Si.connect(i=sources, j=targets)
+    # sources, targets = input_connection_matrix.nonzero()
+    # Si.connect(i=sources, j=targets)
     # Si.connect(condition='i==mmidx_post')
-    # Si.connect(p=args.input_connection_density*len(m.S)/(nbInputs*len(m.G)))
+    Si.connect(p=args.input_connection_density*len(m.S)/(nbInputs*len(m.G)))
 
     Si.w = args.win
 
