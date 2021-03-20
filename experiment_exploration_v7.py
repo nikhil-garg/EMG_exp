@@ -74,7 +74,7 @@ if __name__ == '__main__':
 		,refractory=[1]
         ,learning_algorithm=['critical']
         ,topology = ['random']
-        ,lr_critical = [0.05,0.06,0.08,0.9,0.1,0.11,0.12,0.13,0.14.0.15]
+        ,lr_critical = [0.05,0.06,0.08,0.9,0.1,0.11,0.12,0.13,0.14,0.15]
         ,macrocolumnShape=[[2,2,2]]
         , minicolumnShape=[[4,4,2]]
         ,connection_density=[0.3]
