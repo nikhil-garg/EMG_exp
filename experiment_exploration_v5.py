@@ -73,7 +73,7 @@ if __name__ == '__main__':
 		,thr_init_dev = [0.5]
 		,refractory=[1]
         ,learning_algorithm=['critical','none']
-        ,topology = ['random', 'small-world']
+        ,topology = ['random']
         ,lr_critical = [0.1]
         ,macrocolumnShape=[[2,2,2]]
         , minicolumnShape=[[4,4,2]]

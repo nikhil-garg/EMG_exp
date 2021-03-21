@@ -81,7 +81,7 @@ if __name__ == '__main__':
         ,adaptiveProb=[1]
         ,excitatoryProb=[0.8]
         ,noise=[0]
-        ,stdp_tau = [25,50,75,100,150,200]
+        ,stdp_tau = [50,75,100,150,200]
         ,stdp_apre = [1e-4,1e-3,1e-2]
 		,wmax = [1]
 		,winitmax=[0.25]
