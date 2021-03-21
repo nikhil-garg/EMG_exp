@@ -62,7 +62,7 @@ if __name__ == '__main__':
                          })
 
 	parameters = dict(
-		dataset=['roshambo','5_class']
+		dataset=['5_class']
 		,memoryless=[True]
 		,win=['1.0 * rand()']
 		,input_connection_density=[0.15]
