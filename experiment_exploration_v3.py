@@ -82,7 +82,7 @@ if __name__ == '__main__':
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
-		,fold=[1]
+		,fold=[3]
     )
 	param_values = [v for v in parameters.values()]
 
