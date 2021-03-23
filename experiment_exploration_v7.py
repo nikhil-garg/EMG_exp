@@ -58,12 +58,12 @@ if __name__ == '__main__':
                          })
 
 	parameters = dict(
-		dataset=['5_class']
+		dataset=['roshambo']
 		,memoryless=[True]
 		,win=['1.0 * rand()']
-		,input_connection_density=[0.15,0.1]
-		,tstart = [0]
-		,tlast = [1800]
+		,input_connection_density=[0.15]
+		,tstart = [600]
+		,tlast = [1200]
 		,freeze_time_ms = [0]
 		,thr_init = [1]
 		,thr_init_dev = [0.5]
@@ -73,16 +73,16 @@ if __name__ == '__main__':
         ,lr_critical = [0.1]
         ,macrocolumnShape=[[4,4,4]]
         ,minicolumnShape=[[4,4,2]]
-        ,connection_density=[0.1,0.3]
-        ,adaptiveProb=[1,0.8]
-        ,excitatoryProb=[0.6,0.8]
+        ,connection_density=[0.1]
+        ,adaptiveProb=[1]
+        ,excitatoryProb=[0.8]
         ,noise=[0]
         ,stdp_tau = [25]
         ,stdp_apre = [1e-3]
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
-		,fold=[2]
+		,fold=[1,2,3]
     )
 	param_values = [v for v in parameters.values()]
 
