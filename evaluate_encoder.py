@@ -120,12 +120,12 @@ def evaluate_encoder(args):
     #Confusion matrix
     predictions = clf_input.predict(X_input_test)
     ax = skplt.metrics.plot_confusion_matrix(Y_input_test, predictions, normalize=True)
-    plt.savefig(plot_dir+args.experiment_name+'_decoded_'+'confusion'+'.png')
+    plt.savefig(plot_dir+args.experiment_name+'_decoded_'+'confusion'+'.svg')
     plt.clf()
     #ROC curve
     predicted_probas = clf_input.predict_proba(X_input_test)
     ax2 = skplt.metrics.plot_roc(Y_input_test, predicted_probas)
-    plt.savefig(plot_dir+args.experiment_name+'_decoded_'+'roc'+'.png')
+    plt.savefig(plot_dir+args.experiment_name+'_decoded_'+'roc'+'.svg')
     plt.clf()
 
 
@@ -141,18 +141,23 @@ def evaluate_encoder(args):
     #Confusion matrix
     predictions = clf_baseline.predict(X_test)
     ax = skplt.metrics.plot_confusion_matrix(Y_test, predictions, normalize=True)
-    plt.savefig(plot_dir+args.experiment_name+'_baseline_'+'confusion'+'.png')
+    plt.savefig(plot_dir+args.experiment_name+'_baseline_'+'confusion'+'.svg')
     plt.clf()
     #ROC curve
     predicted_probas = clf_baseline.predict_proba(X_test)
     ax2 = skplt.metrics.plot_roc(Y_test, predicted_probas)
-    plt.savefig(plot_dir+args.experiment_name+'_baseline_'+'roc'+'.png')
+    plt.savefig(plot_dir+args.experiment_name+'_baseline_'+'roc'+'.svg')
     plt.clf()
     
 
 
     plot_dataset(X=X_test,y=Y_test,fig_dir=plot_dir, fig_name=args.experiment_name+'_dataset_raw_test',args=args)
     plot_dataset(X=np.array(X_input_test),y=np.array(Y_input_test),fig_dir=plot_dir, fig_name=args.experiment_name+'_dataset_decoded_test',args=args)
+    np.savez_compressed(
+        'spike_data.npz',
+        X=np.array(X_input_test),
+        Y_EMG_Train=np.array(Y_input_test)
+    )
 
 
     return svm_score_input,avg_spike_rate, svm_score_baseline

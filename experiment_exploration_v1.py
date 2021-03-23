@@ -71,7 +71,7 @@ if __name__ == '__main__':
         ,learning_algorithm=['critical']
         ,topology = ['small-world']
         ,lr_critical = [0.1]
-        ,macrocolumnShape=[[4,4,4],[4,4,8],[4,8,8]]
+        ,macrocolumnShape=[[4,4,4]]
         ,minicolumnShape=[[4,4,2]]
         ,connection_density=[0.1]
         ,adaptiveProb=[1]

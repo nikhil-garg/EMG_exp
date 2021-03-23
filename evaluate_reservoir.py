@@ -211,7 +211,7 @@ def evaluate_reservoir(args):
         logger.info('Simulating for iteration %i' % (iteration + 1))
         net.run(duration, report='text')
 
-        if (iteration == 3):
+        if (iteration == 1):
            
             plt.subplot(311)
             plt.plot(m.G.vt, '.k')
@@ -434,6 +434,17 @@ def evaluate_reservoir(args):
     svm_score_input = clf_input.score(X_input_test, Y_input_test)
     print("svm radial Input test accuraccy")
     print(svm_score_input)
+
+    #Confusion matrix
+    predictions = clf.predict(X_test)
+    ax = skplt.metrics.plot_confusion_matrix(Y_test, predictions, normalize=True)
+    plt.savefig('reservoir'+'confusion'+'.svg')
+    plt.clf()
+    #ROC curve
+    predicted_probas = clf.predict_proba(X_test)
+    ax2 = skplt.metrics.plot_roc(Y_test, predicted_probas)
+    plt.savefig('reservoir'+'roc'+'.svg')
+    plt.clf()
 
 
     nbsynapses = len(m.S)

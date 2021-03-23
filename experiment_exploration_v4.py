@@ -71,7 +71,7 @@ if __name__ == '__main__':
         ,learning_algorithm=['none']
         ,topology = ['small-world']
         ,lr_critical = [0.1]
-        ,macrocolumnShape=[[2,2,2],[4,2,2],[4,4,2],[8,8,8]]
+        ,macrocolumnShape=[[2,2,2],[4,2,2],[4,4,2]]
         ,minicolumnShape=[[4,4,2]]
         ,connection_density=[0.1]
         ,adaptiveProb=[1]
@@ -82,7 +82,7 @@ if __name__ == '__main__':
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
-		,fold=[2]
+		,fold=[1]
     )
 	param_values = [v for v in parameters.values()]
 
