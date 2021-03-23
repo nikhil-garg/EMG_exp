@@ -106,5 +106,17 @@ sbatch slrum_trial_v10.sh --log_file_path $OUTDIR --fold 3 --seed 50
 
 
 
+sbatch slrum_trial_v1.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v2.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v3.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v4.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v5.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v6.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v7.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v8.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v9.sh --log_file_path $OUTDIR --seed 50
+sbatch slrum_trial_v10.sh --log_file_path $OUTDIR --seed 50
+
+
 
 
