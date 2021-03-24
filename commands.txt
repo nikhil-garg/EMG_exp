@@ -108,14 +108,29 @@ sbatch slrum_trial_v10.sh --log_file_path $OUTDIR --fold 3 --seed 50
 
 sbatch slrum_trial_v1.sh --log_file_path $OUTDIR --seed 50
 sbatch slrum_trial_v2.sh --log_file_path $OUTDIR --seed 50
-sbatch slrum_trial_v3.sh --log_file_path $OUTDIR --seed 50
-sbatch slrum_trial_v4.sh --log_file_path $OUTDIR --seed 50
-
-
 sbatch slrum_trial_v7.sh --log_file_path $OUTDIR --seed 50
 sbatch slrum_trial_v8.sh --log_file_path $OUTDIR --seed 50
+
+
+sbatch slrum_trial_v2.sh --log_file_path $OUTDIR --seed 50
 sbatch slrum_trial_v9.sh --log_file_path $OUTDIR --seed 50
 sbatch slrum_trial_v10.sh --log_file_path $OUTDIR --seed 50
+
+
+
+64471526   ng1998 def-drod1901 slrum_trial_v7   R   12:31:30     1    2        N/A     32G cdr822 (None) 
+       64471527   ng1998 def-drod1901 slrum_trial_v8   R   12:31:30     1    2        N/A     32G cdr843 (None) 
+       64489189   ng1998 def-drod1901 slrum_trial_v3   R   15:50:09     1    2        N/A     32G cdr783 (None) 
+       64489190   ng1998 def-drod1901 slrum_trial_v4   R   15:50:09     1    2        N/A     32G cdr783 (None) 
+       64509540   ng1998 def-drod1901 slrum_trial_v1   R   23:07:47     1    2        N/A     32G cdr783 (None) 
+       64509554   ng1998 def-drod1901 slrum_trial_v2   R   23:07:47     1    2        N/A     32G cdr816 (None) 
+       64509555   ng1998 def-drod1901 slrum_trial_v9   R   23:29:34     1    2        N/A     32G cdr494 (None) 
+       64509558   ng1998 def-drod1901 slrum_trial_v1   R   23:29:34     1    2        N/A     32G cdr458 (None) 
+       64511037   ng1998 def-drod1901 slrum_trial_v7   R   23:42:45     1    2        N/A     32G cdr830 (None) 
+       64511042   ng1998 def-drod1901 slrum_trial_v8   R   23:42:45     1    2        N/A     32G cdr874 (None) 
+       64511032   ng1998 def-drod1901 slrum_trial_v1   R   23:56:55     1    2        N/A     32G cdr747 (None) 
+       64511034   ng1998 def-drod1901 slrum_trial_v2   R   23:56:55     1    2        N/A     32G cdr790 (None) 
+
 
 
 

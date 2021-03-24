@@ -307,7 +307,7 @@ def plot_dataset(X,y,fig_dir, fig_name,args):
     plt.savefig(fig_dir+fig_name+'_feature_importances'+'.png')
     plt.clf()
 
-    skplt.decomposition.plot_pca_2d_projection(pca, X, y, biplot=True)
+    skplt.decomposition.plot_pca_2d_projection(pca, X, y, biplot=False)
     plt.savefig(fig_dir+fig_name+'_pca'+'.svg')
     plt.clf()
 

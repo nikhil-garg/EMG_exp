@@ -32,11 +32,11 @@ if __name__ == '__main__':
                          })
 
 	parameters = dict(
-		dataset = [ '3_class','5_class']
+		dataset = [ 'roshambo']
 		,threshold = [0.5]
 		,interpfact = [5]
 		,refractory = [1]
-		, fold=[1,2,3]
+		, fold=[2]
     )
 	param_values = [v for v in parameters.values()]
 
