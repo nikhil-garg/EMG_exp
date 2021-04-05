@@ -68,7 +68,7 @@ if __name__ == '__main__':
 		,thr_init = [1]
 		,thr_init_dev = [0.5]
 		,refractory=[1]
-        ,learning_algorithm=['none']
+        ,learning_algorithm=['critical']
         ,topology = ['small-world']
         ,lr_critical = [0.1]
         ,macrocolumnShape=[[2,5,1]]
@@ -82,11 +82,12 @@ if __name__ == '__main__':
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
+		,cfb=[0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5]
 		,fold=[1,2,3]
     )
 	param_values = [v for v in parameters.values()]
 
-	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin,args.fold in product(*param_values):
+	for args.dataset,args.memoryless_flag, args.win,args.input_connection_density,args.tstart,args.tlast,args.freeze_time_ms,args.init_thr, args.init_thr_dev,args.refractory, args.learning_algorithm,args.topology,args.lr_critical, args.macrocolumnShape,args.minicolumnShape, args.connection_density, args.adaptiveProb,args.excitatoryProb,args.noise, args.stdp_tau, args.stdp_apre, args.wmax, args.winitmax, args.winitmin,args.cbf,args.fold in product(*param_values):
 
 			# Fix the seed of all random number generator
 		seed = int(args.seed)
