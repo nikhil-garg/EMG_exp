@@ -151,6 +151,8 @@ def evaluate_reservoir(args):
 
     logger.info('Number of neurons in the population: %d' % (len(m.G)))
     logger.info('Number of synapses in the population: %d' % (len(m.S)))
+    logger.info('Number of input synapses in the population: %d' % (len(Si)))
+
 
     prefs.codegen.target = args.target  # Use numpy instead of cython backend for prototyping, you can remove later (slower overall but no compiling)
 
