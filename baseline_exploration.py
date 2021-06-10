@@ -32,7 +32,7 @@ if __name__ == '__main__':
                          })
 
 	parameters = dict(
-		dataset = [ 'roshambo']
+		dataset = [ '5_class']
 		,threshold = [0.5]
 		,interpfact = [5]
 		,refractory = [1]

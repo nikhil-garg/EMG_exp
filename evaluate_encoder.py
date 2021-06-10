@@ -117,6 +117,7 @@ def evaluate_encoder(args):
 
     pwd = os.getcwd()
     plot_dir = pwd + '/plots/'
+    plt.rcParams.update({'font.size': 16})
     #Confusion matrix
     predictions = clf_input.predict(X_input_test)
     ax = skplt.metrics.plot_confusion_matrix(Y_input_test, predictions, normalize=True)

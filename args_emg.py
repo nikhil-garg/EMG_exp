@@ -110,7 +110,7 @@ def args():
 
     parser.add_argument(
         "--connection_density",
-        default=0.6,
+        default=0.3,
         type=float,
         help="p_max of reservoir connections" "e.g. 0.1, 0.9 ",
     )
