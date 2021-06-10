@@ -1,143 +1,0 @@
-Using base prefix '/cvmfs/soft.computecanada.ca/easybuild/software/2017/Core/python/3.7.4'
-New python executable in /localscratch/ng1998.62330697.0/env/bin/python
-Installing setuptools, pip, wheel...
-done.
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting scipy
-Collecting numpy>=1.13.3 (from scipy)
-Installing collected packages: numpy, scipy
-Successfully installed numpy-1.19.2 scipy-1.4.1
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting pandas
-Requirement already satisfied: numpy>=1.15.4 in ./env/lib/python3.7/site-packages (from pandas) (1.19.2)
-Collecting pytz>=2017.2 (from pandas)
-Collecting python-dateutil>=2.7.3 (from pandas)
-Collecting six>=1.5 (from python-dateutil>=2.7.3->pandas)
-Installing collected packages: pytz, six, python-dateutil, pandas
-Successfully installed pandas-1.1.3 python-dateutil-2.8.1 pytz-2021.1 six-1.15.0
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting matplotlib
-Collecting certifi>=2020.06.20 (from matplotlib)
-Collecting cycler>=0.10 (from matplotlib)
-Requirement already satisfied: python-dateutil>=2.1 in ./env/lib/python3.7/site-packages (from matplotlib) (2.8.1)
-Collecting kiwisolver>=1.0.1 (from matplotlib)
-Collecting pillow>=6.2.0 (from matplotlib)
-Requirement already satisfied: numpy>=1.15 in ./env/lib/python3.7/site-packages (from matplotlib) (1.19.2)
-Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 (from matplotlib)
-Requirement already satisfied: six in ./env/lib/python3.7/site-packages (from cycler>=0.10->matplotlib) (1.15.0)
-Installing collected packages: certifi, cycler, kiwisolver, pillow, pyparsing, matplotlib
-Successfully installed certifi-2020.12.5 cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.2 pillow-7.2.0 pyparsing-2.4.7
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting seaborn
-Requirement already satisfied: matplotlib>=2.2 in ./env/lib/python3.7/site-packages (from seaborn) (3.3.2)
-Requirement already satisfied: pandas>=0.23 in ./env/lib/python3.7/site-packages (from seaborn) (1.1.3)
-Requirement already satisfied: numpy>=1.15 in ./env/lib/python3.7/site-packages (from seaborn) (1.19.2)
-Requirement already satisfied: scipy>=1.0 in ./env/lib/python3.7/site-packages (from seaborn) (1.4.1)
-Requirement already satisfied: pillow>=6.2.0 in ./env/lib/python3.7/site-packages (from matplotlib>=2.2->seaborn) (7.2.0)
-Requirement already satisfied: python-dateutil>=2.1 in ./env/lib/python3.7/site-packages (from matplotlib>=2.2->seaborn) (2.8.1)
-Requirement already satisfied: kiwisolver>=1.0.1 in ./env/lib/python3.7/site-packages (from matplotlib>=2.2->seaborn) (1.3.1)
-Requirement already satisfied: cycler>=0.10 in ./env/lib/python3.7/site-packages (from matplotlib>=2.2->seaborn) (0.10.0)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in ./env/lib/python3.7/site-packages (from matplotlib>=2.2->seaborn) (2.4.7)
-Requirement already satisfied: certifi>=2020.06.20 in ./env/lib/python3.7/site-packages (from matplotlib>=2.2->seaborn) (2020.12.5)
-Requirement already satisfied: pytz>=2017.2 in ./env/lib/python3.7/site-packages (from pandas>=0.23->seaborn) (2021.1)
-Requirement already satisfied: six>=1.5 in ./env/lib/python3.7/site-packages (from python-dateutil>=2.1->matplotlib>=2.2->seaborn) (1.15.0)
-Installing collected packages: seaborn
-Successfully installed seaborn-0.11.1
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting Brian2
-Requirement already satisfied: numpy>=1.15 in ./env/lib/python3.7/site-packages (from Brian2) (1.19.2)
-Requirement already satisfied: setuptools>=24.2 in ./env/lib/python3.7/site-packages (from Brian2) (41.0.1)
-Collecting cython>=0.29 (from Brian2)
-  Using cached https://files.pythonhosted.org/packages/9e/98/bff39b3acaebbc6102be71797f655bbe60738f7339db4ad7bd0772c08daf/Cython-0.29.22-py2.py3-none-any.whl
-Collecting sympy>=1.2 (from Brian2)
-Collecting jinja2>=2.7 (from Brian2)
-Requirement already satisfied: pyparsing in ./env/lib/python3.7/site-packages (from Brian2) (2.4.7)
-Collecting mpmath>=0.19 (from sympy>=1.2->Brian2)
-  Using cached https://files.pythonhosted.org/packages/d4/cf/3965bddbb4f1a61c49aacae0e78fd1fe36b5dc36c797b31f30cf07dcbbb7/mpmath-1.2.1-py3-none-any.whl
-Collecting MarkupSafe>=0.23 (from jinja2>=2.7->Brian2)
-Installing collected packages: cython, mpmath, sympy, MarkupSafe, jinja2, Brian2
-Successfully installed Brian2-2.4.2 MarkupSafe-1.1.1 cython-0.29.22 jinja2-2.11.3 mpmath-1.2.1 sympy-1.7.1
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting scikit_plot
-  Using cached https://files.pythonhosted.org/packages/7c/47/32520e259340c140a4ad27c1b97050dd3254fdc517b1d59974d47037510e/scikit_plot-0.3.7-py3-none-any.whl
-Requirement already satisfied: scipy>=0.9 in ./env/lib/python3.7/site-packages (from scikit_plot) (1.4.1)
-Collecting joblib>=0.10 (from scikit_plot)
-Requirement already satisfied: matplotlib>=1.4.0 in ./env/lib/python3.7/site-packages (from scikit_plot) (3.3.2)
-Collecting scikit-learn>=0.18 (from scikit_plot)
-Requirement already satisfied: numpy>=1.13.3 in ./env/lib/python3.7/site-packages (from scipy>=0.9->scikit_plot) (1.19.2)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in ./env/lib/python3.7/site-packages (from matplotlib>=1.4.0->scikit_plot) (2.4.7)
-Requirement already satisfied: pillow>=6.2.0 in ./env/lib/python3.7/site-packages (from matplotlib>=1.4.0->scikit_plot) (7.2.0)
-Requirement already satisfied: cycler>=0.10 in ./env/lib/python3.7/site-packages (from matplotlib>=1.4.0->scikit_plot) (0.10.0)
-Requirement already satisfied: python-dateutil>=2.1 in ./env/lib/python3.7/site-packages (from matplotlib>=1.4.0->scikit_plot) (2.8.1)
-Requirement already satisfied: kiwisolver>=1.0.1 in ./env/lib/python3.7/site-packages (from matplotlib>=1.4.0->scikit_plot) (1.3.1)
-Requirement already satisfied: certifi>=2020.06.20 in ./env/lib/python3.7/site-packages (from matplotlib>=1.4.0->scikit_plot) (2020.12.5)
-Collecting threadpoolctl>=2.0.0 (from scikit-learn>=0.18->scikit_plot)
-Requirement already satisfied: six in ./env/lib/python3.7/site-packages (from cycler>=0.10->matplotlib>=1.4.0->scikit_plot) (1.15.0)
-Installing collected packages: joblib, threadpoolctl, scikit-learn, scikit-plot
-Successfully installed joblib-1.0.1 scikit-learn-0.23.0 scikit-plot-0.3.7 threadpoolctl-2.1.0
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/nix/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Requirement already satisfied: scikit_learn in ./env/lib/python3.7/site-packages (0.23.0)
-Requirement already satisfied: joblib>=0.11 in ./env/lib/python3.7/site-packages (from scikit_learn) (1.0.1)
-Requirement already satisfied: numpy>=1.13.3 in ./env/lib/python3.7/site-packages (from scikit_learn) (1.19.2)
-Requirement already satisfied: scipy>=0.19.1 in ./env/lib/python3.7/site-packages (from scikit_learn) (1.4.1)
-Requirement already satisfied: threadpoolctl>=2.0.0 in ./env/lib/python3.7/site-packages (from scikit_learn) (2.1.0)
-Cloning into 'EMG_exp'...
-Checking out files:  20% (333/1588)   Checking out files:  21% (334/1588)   Checking out files:  22% (350/1588)   Checking out files:  23% (366/1588)   Checking out files:  24% (382/1588)   Checking out files:  25% (397/1588)   Checking out files:  26% (413/1588)   Checking out files:  27% (429/1588)   Checking out files:  28% (445/1588)   Checking out files:  29% (461/1588)   Checking out files:  30% (477/1588)   Checking out files:  31% (493/1588)   Checking out files:  32% (509/1588)   Checking out files:  33% (525/1588)   Checking out files:  34% (540/1588)   Checking out files:  35% (556/1588)   Checking out files:  36% (572/1588)   Checking out files:  37% (588/1588)   Checking out files:  38% (604/1588)   Checking out files:  38% (606/1588)   Checking out files:  39% (620/1588)   Checking out files:  40% (636/1588)   Checking out files:  41% (652/1588)   Checking out files:  42% (667/1588)   Checking out files:  43% (683/1588)   Checking out files:  44% (699/1588)   Checking out files:  45% (715/1588)   Checking out files:  46% (731/1588)   Checking out files:  47% (747/1588)   Checking out files:  48% (763/1588)   Checking out files:  49% (779/1588)   Checking out files:  50% (794/1588)   Checking out files:  51% (810/1588)   Checking out files:  52% (826/1588)   Checking out files:  53% (842/1588)   Checking out files:  54% (858/1588)   Checking out files:  55% (874/1588)   Checking out files:  56% (890/1588)   Checking out files:  57% (906/1588)   Checking out files:  58% (922/1588)   Checking out files:  59% (937/1588)   Checking out files:  60% (953/1588)   Checking out files:  61% (969/1588)   Checking out files:  62% (985/1588)   Checking out files:  63% (1001/1588)   Checking out files:  64% (1017/1588)   Checking out files:  65% (1033/1588)   Checking out files:  66% (1049/1588)   Checking out files:  67% (1064/1588)   Checking out files:  68% (1080/1588)   Checking out files:  69% (1096/1588)   Checking out files:  70% (1112/1588)   Checking out files:  71% (1128/1588)   Checking out files:  72% (1144/1588)   Checking out files:  73% (1160/1588)   Checking out files:  74% (1176/1588)   Checking out files:  75% (1191/1588)   Checking out files:  76% (1207/1588)   Checking out files:  77% (1223/1588)   Checking out files:  78% (1239/1588)   Checking out files:  79% (1255/1588)   Checking out files:  80% (1271/1588)   Checking out files:  81% (1287/1588)   Checking out files:  82% (1303/1588)   Checking out files:  83% (1319/1588)   Checking out files:  84% (1334/1588)   Checking out files:  85% (1350/1588)   Checking out files:  86% (1366/1588)   Checking out files:  87% (1382/1588)   Checking out files:  88% (1398/1588)   Checking out files:  89% (1414/1588)   Checking out files:  90% (1430/1588)   Checking out files:  91% (1446/1588)   Checking out files:  92% (1461/1588)   Checking out files:  93% (1477/1588)   Checking out files:  94% (1493/1588)   Checking out files:  95% (1509/1588)   Checking out files:  96% (1525/1588)   Checking out files:  97% (1541/1588)   Checking out files:  98% (1557/1588)   Checking out files:  99% (1573/1588)   Checking out files: 100% (1588/1588)   Checking out files: 100% (1588/1588), done.
-{'dataset': 'roshambo', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 10, 'stdp_apre': 0.0001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.6, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau_min': 10, 'init_tau_max': 20, 'init_thr_min': 1, 'init_thr_max': 1.5, 'refractory': 2, 'tstep': 200, 'freeze_time_ms': 1, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'input_connection_density': 0.3, 'experiment_name': 'standalone', 'target': 'cython', 'dt': 1, 'fold': 3, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': None}
-{'dataset': 'roshambo', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 10, 'stdp_apre': 0.0001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.6, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau_min': 10, 'init_tau_max': 20, 'init_thr_min': 1, 'init_thr_max': 1.5, 'refractory': 2, 'tstep': 200, 'freeze_time_ms': 1, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'input_connection_density': 0.3, 'experiment_name': 'roshambo0.5511', 'target': 'cython', 'dt': 1, 'fold': 1, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': None}
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_t_cm7stf.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_k1kyff5l.py Thanks! [brian2]
-Traceback (most recent call last):
-  File "baseline_exploration.py", line 52, in <module>
-    svm_score, firing_rate, svm_score_baseline = evaluate_encoder(args)
-  File "/localscratch/ng1998.62330697.0/EMG_exp/evaluate_encoder.py", line 40, in evaluate_encoder
-    spike_times_train_up, spike_times_train_dn, spike_times_test_up, spike_times_test_dn, X_EMG_Train,X_EMG_Test, Y_EMG_Train,Y_EMG_Test,avg_spike_rate = encode(args)
-  File "/localscratch/ng1998.62330697.0/EMG_exp/encode.py", line 73, in encode
-    names = sorted([name for name in os.listdir(data_dir) if "emg" in name])
-FileNotFoundError: [Errno 2] No such file or directory: '../EMG/dataset/Roshambo/'
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_t_cm7stf.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_k1kyff5l.py Thanks! [brian2]
-Traceback (most recent call last):
-  File "baseline_exploration.py", line 52, in <module>
-    svm_score, firing_rate, svm_score_baseline = evaluate_encoder(args)
-  File "/localscratch/ng1998.62330697.0/EMG_exp/evaluate_encoder.py", line 40, in evaluate_encoder
-    spike_times_train_up, spike_times_train_dn, spike_times_test_up, spike_times_test_dn, X_EMG_Train,X_EMG_Test, Y_EMG_Train,Y_EMG_Test,avg_spike_rate = encode(args)
-  File "/localscratch/ng1998.62330697.0/EMG_exp/encode.py", line 73, in encode
-    names = sorted([name for name in os.listdir(data_dir) if "emg" in name])
-FileNotFoundError: [Errno 2] No such file or directory: '../EMG/dataset/Roshambo/'
-DEBUG:microcircuit:Creating the microcircuit...
-DEBUG:microcircuit:Configuring neuron state variables initial values...
-DEBUG:microcircuit:Configuring excitatory/inhibitory type of neurons...
-DEBUG:microcircuit:Configuring adaptive/Non-adaptive type of neurons...
-DEBUG:microcircuit:Creating network topology custom ...
-{'dataset': 'roshambo', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 10, 'stdp_apre': 0.0001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.6, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau_min': 10, 'init_tau_max': 20, 'init_thr_min': 1, 'init_thr_max': 1.5, 'refractory': 2, 'tstep': 200, 'freeze_time_ms': 1, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'input_connection_density': 0.3, 'experiment_name': 'standalone', 'target': 'cython', 'dt': 1, 'fold': 3, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': '/home/ng1998/project/out/62330697'}
-{'dataset': 'roshambo', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 25, 'stdp_apre': 0.001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.3, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1.0*rand()', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 1, 'adaptiveProb': 1, 'init_tau_min': 25, 'init_tau_max': 25, 'init_thr_min': 1, 'init_thr_max': 1, 'refractory': 1, 'tstep': 200, 'freeze_time_ms': 0, 'tstart': 600, 'tlast': 1200, 'duration': 2000, 'input_connection_density': 0.15, 'experiment_name': 'Corr_Cr_2048_I_50_R_6.txtinp_Cr_2048_I_50_R_3.txtTrue0.156001200none110.3111', 'target': 'cython', 'dt': 1, 'fold': 1, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp_Cr_2048_I_50_R_3.txt', 'path_res_connections': 'Corr_Cr_2048_I_50_R_6.txt', 'log_file_path': '/home/ng1998/project/out/62330697'}
-INFO:evaluate_reservoir:Number of neurons in the population: 256
-INFO:evaluate_reservoir:Number of synapses in the population: 2048
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_94d30sz9.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_rg4kz0pm.py You can also include a copy of the redirected std stream outputs, available at /tmp/brian_stdout_9yl1aodj.log and /tmp/brian_stderr_ihlt9x6b.log Thanks! [brian2]
-Traceback (most recent call last):
-  File "experiment_exploration.py", line 108, in <module>
-    lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input, firing_rate, nbsynapses, nbneurons = evaluate_reservoir(args)
-  File "/localscratch/ng1998.62330697.0/EMG_exp/evaluate_reservoir.py", line 185, in evaluate_reservoir
-    net.store(filename='init')
-  File "/localscratch/ng1998.62330697.0/env/lib/python3.7/site-packages/brian2/core/base.py", line 278, in device_override_decorated_function
-    return func(*args, **kwds)
-  File "/localscratch/ng1998.62330697.0/env/lib/python3.7/site-packages/brian2/core/network.py", line 581, in store
-    store_state = pickle.load(f)
-ValueError: unsupported pickle protocol: 5
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_94d30sz9.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_rg4kz0pm.py You can also include a copy of the redirected std stream outputs, available at /tmp/brian_stdout_9yl1aodj.log and /tmp/brian_stderr_ihlt9x6b.log Thanks! [brian2]
-Traceback (most recent call last):
-  File "experiment_exploration.py", line 108, in <module>
-    lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input, firing_rate, nbsynapses, nbneurons = evaluate_reservoir(args)
-  File "/localscratch/ng1998.62330697.0/EMG_exp/evaluate_reservoir.py", line 185, in evaluate_reservoir
-    net.store(filename='init')
-  File "/localscratch/ng1998.62330697.0/env/lib/python3.7/site-packages/brian2/core/base.py", line 278, in device_override_decorated_function
-    return func(*args, **kwds)
-  File "/localscratch/ng1998.62330697.0/env/lib/python3.7/site-packages/brian2/core/network.py", line 581, in store
-    store_state = pickle.load(f)
-ValueError: unsupported pickle protocol: 5

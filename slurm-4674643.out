@@ -1,257 +1,0 @@
-created virtual environment CPython3.8.2.final.0-64 in 16294ms
-  creator CPython3Posix(dest=/localscratch/ng1998.4674643.0/env, clear=False, global=False)
-  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, via=copy, app_data_dir=/home/ng1998/.local/share/virtualenv/seed-app-data/v1.0.1)
-  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/scipy-1.6.0-cp38-cp38-linux_x86_64.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/numpy-1.20.2-cp38-cp38-linux_x86_64.whl
-Installing collected packages: numpy, scipy
-Successfully installed numpy-1.20.2 scipy-1.6.0
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/pandas-1.2.4-cp38-cp38-linux_x86_64.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/python_dateutil-2.8.1-py2.py3-none-any.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/pytz-2021.1-py3-none-any.whl
-Requirement already satisfied: numpy>=1.16.5 in ./env/lib/python3.8/site-packages (from pandas) (1.20.2)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/six-1.16.0-py2.py3-none-any.whl
-Installing collected packages: six, python-dateutil, pytz, pandas
-Successfully installed pandas-1.2.4 python-dateutil-2.8.1 pytz-2021.1 six-1.16.0
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/matplotlib-3.3.4-cp38-cp38-linux_x86_64.whl
-Requirement already satisfied: numpy>=1.15 in ./env/lib/python3.8/site-packages (from matplotlib) (1.20.2)
-Requirement already satisfied: python-dateutil>=2.1 in ./env/lib/python3.8/site-packages (from matplotlib) (2.8.1)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/cycler-0.10.0-py3-none-any.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/pyparsing-2.4.7-py2.py3-none-any.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/Pillow-8.1.2-cp38-cp38-linux_x86_64.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2/kiwisolver-1.3.1-cp38-cp38-linux_x86_64.whl
-Requirement already satisfied: six>=1.5 in ./env/lib/python3.8/site-packages (from python-dateutil>=2.1->matplotlib) (1.16.0)
-Installing collected packages: cycler, pyparsing, pillow, kiwisolver, matplotlib
-Successfully installed cycler-0.10.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.1.2 pyparsing-2.4.7
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/seaborn-0.11.1-py3-none-any.whl
-Requirement already satisfied: numpy>=1.15 in ./env/lib/python3.8/site-packages (from seaborn) (1.20.2)
-Requirement already satisfied: scipy>=1.0 in ./env/lib/python3.8/site-packages (from seaborn) (1.6.0)
-Requirement already satisfied: pandas>=0.23 in ./env/lib/python3.8/site-packages (from seaborn) (1.2.4)
-Requirement already satisfied: matplotlib>=2.2 in ./env/lib/python3.8/site-packages (from seaborn) (3.3.4)
-Requirement already satisfied: python-dateutil>=2.7.3 in ./env/lib/python3.8/site-packages (from pandas>=0.23->seaborn) (2.8.1)
-Requirement already satisfied: pytz>=2017.3 in ./env/lib/python3.8/site-packages (from pandas>=0.23->seaborn) (2021.1)
-Requirement already satisfied: kiwisolver>=1.0.1 in ./env/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (1.3.1)
-Requirement already satisfied: cycler>=0.10 in ./env/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (0.10.0)
-Requirement already satisfied: pillow>=6.2.0 in ./env/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (8.1.2)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in ./env/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (2.4.7)
-Requirement already satisfied: six>=1.5 in ./env/lib/python3.8/site-packages (from python-dateutil>=2.7.3->pandas>=0.23->seaborn) (1.16.0)
-Installing collected packages: seaborn
-Successfully installed seaborn-0.11.1
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Processing /home/ng1998/.cache/pip/wheels/5d/4b/cf/ef50e71df5479d67f981cbb17b1d842381019d27ba144d57de/Brian2-2.4.2-cp38-cp38-linux_x86_64.whl
-Requirement already satisfied: setuptools>=24.2 in ./env/lib/python3.8/site-packages (from Brian2) (46.1.3)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/Cython-0.29.23-cp38-cp38-linux_x86_64.whl
-Collecting sympy>=1.2
-  Using cached sympy-1.8-py3-none-any.whl (6.1 MB)
-Requirement already satisfied: pyparsing in ./env/lib/python3.8/site-packages (from Brian2) (2.4.7)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/Jinja2-3.0.1-py3-none-any.whl
-Requirement already satisfied: numpy>=1.15 in ./env/lib/python3.8/site-packages (from Brian2) (1.20.2)
-Collecting mpmath>=0.19
-  Using cached mpmath-1.2.1-py3-none-any.whl (532 kB)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/MarkupSafe-2.0.1-cp38-cp38-linux_x86_64.whl
-Installing collected packages: cython, mpmath, sympy, MarkupSafe, jinja2, Brian2
-Successfully installed Brian2-2.4.2 MarkupSafe-2.0.1 cython-0.29.23 jinja2-3.0.1 mpmath-1.2.1 sympy-1.8
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Collecting scikit_plot
-  Using cached scikit_plot-0.3.7-py3-none-any.whl (33 kB)
-Requirement already satisfied: scipy>=0.9 in ./env/lib/python3.8/site-packages (from scikit_plot) (1.6.0)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/joblib-1.0.1-py3-none-any.whl
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/scikit_learn-0.24.1-cp38-cp38-linux_x86_64.whl
-Requirement already satisfied: matplotlib>=1.4.0 in ./env/lib/python3.8/site-packages (from scikit_plot) (3.3.4)
-Requirement already satisfied: numpy>=1.16.5 in ./env/lib/python3.8/site-packages (from scipy>=0.9->scikit_plot) (1.20.2)
-Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic/threadpoolctl-2.1.0-py3-none-any.whl
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in ./env/lib/python3.8/site-packages (from matplotlib>=1.4.0->scikit_plot) (2.4.7)
-Requirement already satisfied: python-dateutil>=2.1 in ./env/lib/python3.8/site-packages (from matplotlib>=1.4.0->scikit_plot) (2.8.1)
-Requirement already satisfied: pillow>=6.2.0 in ./env/lib/python3.8/site-packages (from matplotlib>=1.4.0->scikit_plot) (8.1.2)
-Requirement already satisfied: kiwisolver>=1.0.1 in ./env/lib/python3.8/site-packages (from matplotlib>=1.4.0->scikit_plot) (1.3.1)
-Requirement already satisfied: cycler>=0.10 in ./env/lib/python3.8/site-packages (from matplotlib>=1.4.0->scikit_plot) (0.10.0)
-Requirement already satisfied: six>=1.5 in ./env/lib/python3.8/site-packages (from python-dateutil>=2.1->matplotlib>=1.4.0->scikit_plot) (1.16.0)
-Installing collected packages: joblib, threadpoolctl, scikit-learn, scikit-plot
-Successfully installed joblib-1.0.1 scikit-learn-0.24.1 scikit-plot-0.3.7 threadpoolctl-2.1.0
-Ignoring pip: markers 'python_version < "3"' don't match your environment
-Looking in links: /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/avx2, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/gentoo/generic, /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic
-Requirement already satisfied: scikit_learn in ./env/lib/python3.8/site-packages (0.24.1)
-Requirement already satisfied: joblib>=0.11 in ./env/lib/python3.8/site-packages (from scikit_learn) (1.0.1)
-Requirement already satisfied: scipy>=0.19.1 in ./env/lib/python3.8/site-packages (from scikit_learn) (1.6.0)
-Requirement already satisfied: numpy>=1.13.3 in ./env/lib/python3.8/site-packages (from scikit_learn) (1.20.2)
-Requirement already satisfied: threadpoolctl>=2.0.0 in ./env/lib/python3.8/site-packages (from scikit_learn) (2.1.0)
-Cloning into 'EMG_exp'...
-Updating files:  20% (351/1724)Updating files:  21% (363/1724)Updating files:  22% (380/1724)Updating files:  23% (397/1724)Updating files:  24% (414/1724)Updating files:  25% (431/1724)Updating files:  26% (449/1724)Updating files:  27% (466/1724)Updating files:  28% (483/1724)Updating files:  29% (500/1724)Updating files:  30% (518/1724)Updating files:  31% (535/1724)Updating files:  32% (552/1724)Updating files:  33% (569/1724)Updating files:  34% (587/1724)Updating files:  35% (604/1724)Updating files:  36% (621/1724)Updating files:  37% (638/1724)Updating files:  38% (656/1724)Updating files:  39% (673/1724)Updating files:  40% (690/1724)Updating files:  41% (707/1724)Updating files:  42% (725/1724)Updating files:  42% (736/1724)Updating files:  43% (742/1724)Updating files:  44% (759/1724)Updating files:  45% (776/1724)Updating files:  46% (794/1724)Updating files:  47% (811/1724)Updating files:  48% (828/1724)Updating files:  49% (845/1724)Updating files:  50% (862/1724)Updating files:  51% (880/1724)Updating files:  52% (897/1724)Updating files:  53% (914/1724)Updating files:  54% (931/1724)Updating files:  55% (949/1724)Updating files:  56% (966/1724)Updating files:  57% (983/1724)Updating files:  58% (1000/1724)Updating files:  59% (1018/1724)Updating files:  60% (1035/1724)Updating files:  61% (1052/1724)Updating files:  62% (1069/1724)Updating files:  63% (1087/1724)Updating files:  64% (1104/1724)Updating files:  65% (1121/1724)Updating files:  66% (1138/1724)Updating files:  67% (1156/1724)Updating files:  68% (1173/1724)Updating files:  69% (1190/1724)Updating files:  70% (1207/1724)Updating files:  71% (1225/1724)Updating files:  72% (1242/1724)Updating files:  73% (1259/1724)Updating files:  74% (1276/1724)Updating files:  75% (1293/1724)Updating files:  76% (1311/1724)Updating files:  77% (1328/1724)Updating files:  78% (1345/1724)Updating files:  79% (1362/1724)Updating files:  80% (1380/1724)Updating files:  81% (1397/1724)Updating files:  82% (1414/1724)Updating files:  83% (1431/1724)Updating files:  84% (1449/1724)Updating files:  85% (1466/1724)Updating files:  86% (1483/1724)Updating files:  87% (1500/1724)Updating files:  88% (1518/1724)Updating files:  89% (1535/1724)Updating files:  90% (1552/1724)Updating files:  91% (1569/1724)Updating files:  92% (1587/1724)Updating files:  93% (1604/1724)Updating files:  94% (1621/1724)Updating files:  95% (1638/1724)Updating files:  96% (1656/1724)Updating files:  97% (1673/1724)Updating files:  98% (1690/1724)Updating files:  99% (1707/1724)Updating files: 100% (1724/1724)Updating files: 100% (1724/1724), done.
-INFO       Cache size for target "cython": 7485 MB.
-You can call "clear_cache('cython')" to delete all files from the cache or manually delete files in the "/home/ng1998/.cython/brian_extensions" directory. [brian2]
-INFO       Cache size for target "cython": 7485 MB.
-You can call "clear_cache('cython')" to delete all files from the cache or manually delete files in the "/home/ng1998/.cython/brian_extensions" directory. [brian2.__init__]
-INFO       Cache size for target "cython": 7485 MB.
-You can call "clear_cache('cython')" to delete all files from the cache or manually delete files in the "/home/ng1998/.cython/brian_extensions" directory. [brian2.__init__]
-WARNING    /localscratch/ng1998.4674643.0/EMG_exp/encode.py:124: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
-  X_EMG = np.array(X_EMG)
- [py.warnings]
-WARNING    /localscratch/ng1998.4674643.0/EMG_exp/encode.py:124: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
-  X_EMG = np.array(X_EMG)
- [py.warnings]
-{'dataset': 'roshambo', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 10, 'stdp_apre': 0.0001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.3, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau': 25, 'init_tau_dev': 0, 'init_thr': 1, 'init_thr_dev': 0, 'refractory': 2, 'tstep': 200, 'freeze_time_ms': 1, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'noise': 0, 'seed': 50, 'input_connection_density': 0.3, 'experiment_name': 'standalone', 'target': 'cython', 'dt': 1, 'fold': 3, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': None}
-{'dataset': '5_class', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 10, 'stdp_apre': 0.0001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.3, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau': 25, 'init_tau_dev': 0, 'init_thr': 1, 'init_thr_dev': 0, 'refractory': 2, 'tstep': 200, 'freeze_time_ms': 1, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'noise': 0, 'seed': 50, 'input_connection_density': 0.3, 'experiment_name': '5_class0.5512', 'target': 'cython', 'dt': 1, 'fold': 2, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': None}
-Loaded subject01_session01: EMG = [(25290, 8)] // ANN = [25290]
-Loaded subject01_session02: EMG = [(25089, 8)] // ANN = [25089]
-Loaded subject01_session03: EMG = [(25244, 8)] // ANN = [25244]
-Loaded subject02_session01: EMG = [(25077, 8)] // ANN = [25077]
-Loaded subject02_session02: EMG = [(25331, 8)] // ANN = [25331]
-Loaded subject02_session03: EMG = [(25318, 8)] // ANN = [25318]
-Loaded subject03_session01: EMG = [(25315, 8)] // ANN = [25315]
-Loaded subject03_session02: EMG = [(25306, 8)] // ANN = [25306]
-Loaded subject03_session03: EMG = [(25328, 8)] // ANN = [25328]
-Loaded subject04_session01: EMG = [(25315, 8)] // ANN = [25315]
-Loaded subject04_session02: EMG = [(25328, 8)] // ANN = [25328]
-Loaded subject04_session03: EMG = [(25242, 8)] // ANN = [25242]
-Loaded subject05_session01: EMG = [(25358, 8)] // ANN = [25358]
-Loaded subject05_session02: EMG = [(25330, 8)] // ANN = [25330]
-Loaded subject05_session03: EMG = [(25332, 8)] // ANN = [25332]
-Loaded subject06_session01: EMG = [(24993, 8)] // ANN = [24993]
-Loaded subject06_session02: EMG = [(24850, 8)] // ANN = [24850]
-Loaded subject06_session03: EMG = [(24903, 8)] // ANN = [24903]
-Loaded subject07_session01: EMG = [(25324, 8)] // ANN = [25324]
-Loaded subject07_session02: EMG = [(25304, 8)] // ANN = [25304]
-Loaded subject07_session03: EMG = [(25240, 8)] // ANN = [25240]
-Loaded subject08_session01: EMG = [(25294, 8)] // ANN = [25294]
-Loaded subject08_session02: EMG = [(25318, 8)] // ANN = [25318]
-Loaded subject08_session03: EMG = [(25328, 8)] // ANN = [25328]
-Loaded subject09_session01: EMG = [(25140, 8)] // ANN = [25140]
-Loaded subject09_session02: EMG = [(23455, 8)] // ANN = [23455]
-Loaded subject09_session03: EMG = [(25169, 8)] // ANN = [25169]
-Loaded subject10_session01: EMG = [(25339, 8)] // ANN = [25339]
-Loaded subject10_session02: EMG = [(25318, 8)] // ANN = [25318]
-Loaded subject10_session03: EMG = [(25324, 8)] // ANN = [25324]
-Loaded subject11_session01: EMG = [(21970, 8)] // ANN = [21970]
-Loaded subject11_session02: EMG = [(21382, 8)] // ANN = [21382]
-Loaded subject11_session03: EMG = [(21942, 8)] // ANN = [21942]
-Loaded subject12_session01: EMG = [(25400, 8)] // ANN = [25400]
-Loaded subject12_session02: EMG = [(25362, 8)] // ANN = [25362]
-Loaded subject12_session03: EMG = [(25382, 8)] // ANN = [25382]
-Loaded subject13_session01: EMG = [(25329, 8)] // ANN = [25329]
-Loaded subject13_session02: EMG = [(25378, 8)] // ANN = [25378]
-Loaded subject13_session03: EMG = [(25382, 8)] // ANN = [25382]
-Loaded subject14_session01: EMG = [(25366, 8)] // ANN = [25366]
-Loaded subject14_session02: EMG = [(25388, 8)] // ANN = [25388]
-Loaded subject14_session03: EMG = [(25362, 8)] // ANN = [25362]
-Loaded subject15_session01: EMG = [(25372, 8)] // ANN = [25372]
-Loaded subject15_session02: EMG = [(25348, 8)] // ANN = [25348]
-Loaded subject15_session03: EMG = [(25374, 8)] // ANN = [25374]
-Loaded subject16_session01: EMG = [(25403, 8)] // ANN = [25403]
-Loaded subject16_session02: EMG = [(25371, 8)] // ANN = [25371]
-Loaded subject16_session03: EMG = [(25368, 8)] // ANN = [25368]
-Loaded subject17_session01: EMG = [(25363, 8)] // ANN = [25363]
-Loaded subject17_session02: EMG = [(25374, 8)] // ANN = [25374]
-Loaded subject17_session03: EMG = [(25369, 8)] // ANN = [25369]
-Loaded subject18_session01: EMG = [(25416, 8)] // ANN = [25416]
-Loaded subject18_session02: EMG = [(25376, 8)] // ANN = [25376]
-Loaded subject18_session03: EMG = [(25442, 8)] // ANN = [25442]
-Loaded subject19_session01: EMG = [(21244, 8)] // ANN = [21244]
-Loaded subject19_session02: EMG = [(21834, 8)] // ANN = [21834]
-Loaded subject19_session03: EMG = [(25378, 8)] // ANN = [25378]
-Loaded subject20_session01: EMG = [(21993, 8)] // ANN = [21993]
-Loaded subject20_session02: EMG = [(22297, 8)] // ANN = [22297]
-Loaded subject20_session03: EMG = [(21955, 8)] // ANN = [21955]
-Loaded subject21_session01: EMG = [(25396, 8)] // ANN = [25396]
-Loaded subject21_session02: EMG = [(25378, 8)] // ANN = [25378]
-Loaded subject21_session03: EMG = [(25370, 8)] // ANN = [25370]
-Done sorting trials!
-All good!
-Number of samples in dataset:
-1575
-1575
-Class labels:
-[0, 1, 2, 3, 4]
-Subjects : 
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-Sessions : 
-[1, 2, 3]
-Trials per session : 
-[0, 1, 2, 3, 4]
-Average spiking rate
-124.34946428571428
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_8a66_mu5.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_5wvnv796.py Thanks! [brian2]
-Traceback (most recent call last):
-  File "baseline_exploration.py", line 52, in <module>
-    svm_score, firing_rate, svm_score_baseline = evaluate_encoder(args)
-  File "/localscratch/ng1998.4674643.0/EMG_exp/evaluate_encoder.py", line 40, in evaluate_encoder
-    spike_times_train_up, spike_times_train_dn, spike_times_test_up, spike_times_test_dn, X_EMG_Train,X_EMG_Test, Y_EMG_Train,Y_EMG_Test,avg_spike_rate = encode(args)
-  File "/localscratch/ng1998.4674643.0/EMG_exp/encode.py", line 224, in encode
-    plt.eventplot(spike_times_test_up[1], color=[0, 0, 1], linewidth=0.5)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 2618, in eventplot
-    return gca().eventplot(
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 2368, in gca
-    return gcf().gca(**kwargs)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 747, in gcf
-    return figure()
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 687, in figure
-    figManager = new_figure_manager(num, figsize=figsize,
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 315, in new_figure_manager
-    return _backend_mod.new_figure_manager(*args, **kwargs)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 3494, in new_figure_manager
-    return cls.new_figure_manager_given_figure(num, fig)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/backends/_backend_tk.py", line 885, in new_figure_manager_given_figure
-    window = tk.Tk(className="matplotlib")
-  File "/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.8.2/lib/python3.8/tkinter/__init__.py", line 2261, in __init__
-    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
-_tkinter.TclError: couldn't connect to display "localhost:110.0"
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_8a66_mu5.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_5wvnv796.py Thanks! [brian2]
-Traceback (most recent call last):
-  File "baseline_exploration.py", line 52, in <module>
-    svm_score, firing_rate, svm_score_baseline = evaluate_encoder(args)
-  File "/localscratch/ng1998.4674643.0/EMG_exp/evaluate_encoder.py", line 40, in evaluate_encoder
-    spike_times_train_up, spike_times_train_dn, spike_times_test_up, spike_times_test_dn, X_EMG_Train,X_EMG_Test, Y_EMG_Train,Y_EMG_Test,avg_spike_rate = encode(args)
-  File "/localscratch/ng1998.4674643.0/EMG_exp/encode.py", line 224, in encode
-    plt.eventplot(spike_times_test_up[1], color=[0, 0, 1], linewidth=0.5)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 2618, in eventplot
-    return gca().eventplot(
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 2368, in gca
-    return gcf().gca(**kwargs)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 747, in gcf
-    return figure()
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 687, in figure
-    figManager = new_figure_manager(num, figsize=figsize,
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/pyplot.py", line 315, in new_figure_manager
-    return _backend_mod.new_figure_manager(*args, **kwargs)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 3494, in new_figure_manager
-    return cls.new_figure_manager_given_figure(num, fig)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/matplotlib/backends/_backend_tk.py", line 885, in new_figure_manager_given_figure
-    window = tk.Tk(className="matplotlib")
-  File "/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.8.2/lib/python3.8/tkinter/__init__.py", line 2261, in __init__
-    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
-_tkinter.TclError: couldn't connect to display "localhost:110.0"
-INFO       Cache size for target "cython": 7485 MB.
-You can call "clear_cache('cython')" to delete all files from the cache or manually delete files in the "/home/ng1998/.cython/brian_extensions" directory. [brian2]
-INFO       Cache size for target "cython": 7485 MB.
-You can call "clear_cache('cython')" to delete all files from the cache or manually delete files in the "/home/ng1998/.cython/brian_extensions" directory. [brian2.__init__]
-INFO       Cache size for target "cython": 7485 MB.
-You can call "clear_cache('cython')" to delete all files from the cache or manually delete files in the "/home/ng1998/.cython/brian_extensions" directory. [brian2.__init__]
-{'dataset': 'roshambo', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'none', 'stdp_tau': 10, 'stdp_apre': 0.0001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'custom', 'macrocolumnShape': [4, 4, 4], 'minicolumnShape': [2, 2, 1], 'connection_density': 0.3, 'wmax': 1, 'wmin': 0.01, 'winitmax': 1, 'winitmin': 1, 'win': '1', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau': 25, 'init_tau_dev': 0, 'init_thr': 1, 'init_thr_dev': 0, 'refractory': 2, 'tstep': 200, 'freeze_time_ms': 1, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'noise': 0, 'seed': 50, 'input_connection_density': 0.3, 'experiment_name': 'standalone', 'target': 'cython', 'dt': 1, 'fold': 3, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': '/home/ng1998/project/out/4674643'}
-{'dataset': '5_class', 'encode_thr_up': 0.5, 'encode_thr_dn': 0.5, 'encode_refractory': 1, 'encode_interpfact': 5, 'encoded_data_file_prefix': 'encoded-emg', 'learning_algorithm': 'None', 'stdp_tau': 25, 'stdp_apre': 0.001, 'memoryless_flag': True, 'online_flag': True, 'topology': 'small-world', 'macrocolumnShape': [1, 1, 1], 'minicolumnShape': [4, 4, 2], 'connection_density': 0.1, 'wmax': 1, 'wmin': 0.01, 'winitmax': 0.25, 'winitmin': 0, 'win': '1.0 * rand()', 'cbf': 1, 'lr_critical': 0.1, 'excitatoryProb': 0.8, 'adaptiveProb': 1, 'init_tau': 25, 'init_tau_dev': 0, 'init_thr': 1, 'init_thr_dev': 0.5, 'refractory': 1, 'tstep': 200, 'freeze_time_ms': 0, 'tstart': 0, 'tlast': 1800, 'duration': 2000, 'noise': 0, 'seed': 50, 'input_connection_density': 0.15, 'experiment_name': 'standalone', 'target': 'cython', 'dt': 1, 'fold': 1, 'classes_dict': ['rock', 'paper', 'scissor'], 'path_input_connections': 'inp.txt', 'path_res_connections': 'Conn_map.txt', 'log_file_path': '/home/ng1998/project/out/4674643'}
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_hk0m7syw.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_znsyqotw.py Thanks! [brian2]
-Traceback (most recent call last):
-  File "experiment_exploration_v4.py", line 97, in <module>
-    lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input, firing_rate, nbsynapses, nbneurons = evaluate_reservoir(args)
-  File "/localscratch/ng1998.4674643.0/EMG_exp/evaluate_reservoir.py", line 63, in evaluate_reservoir
-    data = np.load(file_directory + file_name, allow_pickle=True)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/numpy/lib/npyio.py", line 417, in load
-    fid = stack.enter_context(open(os_fspath(file), "rb"))
-FileNotFoundError: [Errno 2] No such file or directory: '/localscratch/ng1998.4674643.0/EMG_exp/dataset/encoded-emg5_class0.50.5151.npz'
-ERROR      Brian 2 encountered an unexpected error. If you think this is a bug in Brian 2, please report this issue either to the discourse forum at <http://brian.discourse.group/>, or to the issue tracker at <https://github.com/brian-team/brian2/issues>. Please include this file with debug information in your report: /tmp/brian_debug_hk0m7syw.log  Additionally, you can also include a copy of the script that was run, available at: /tmp/brian_script_znsyqotw.py Thanks! [brian2]
-Traceback (most recent call last):
-  File "experiment_exploration_v4.py", line 97, in <module>
-    lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input, firing_rate, nbsynapses, nbneurons = evaluate_reservoir(args)
-  File "/localscratch/ng1998.4674643.0/EMG_exp/evaluate_reservoir.py", line 63, in evaluate_reservoir
-    data = np.load(file_directory + file_name, allow_pickle=True)
-  File "/localscratch/ng1998.4674643.0/env/lib/python3.8/site-packages/numpy/lib/npyio.py", line 417, in load
-    fid = stack.enter_context(open(os_fspath(file), "rb"))
-FileNotFoundError: [Errno 2] No such file or directory: '/localscratch/ng1998.4674643.0/EMG_exp/dataset/encoded-emg5_class0.50.5151.npz'
