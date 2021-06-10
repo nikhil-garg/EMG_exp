@@ -58,20 +58,20 @@ if __name__ == '__main__':
                          })
 
 	parameters = dict(
-		dataset=['5_class']
+		dataset=['roshambo']
 		,memoryless=[True]
 		,win=['1.0 * rand()']
 		,input_connection_density=[0.15]
-		,tstart = [0]
-		,tlast = [1800]
+		,tstart = [600]
+		,tlast = [1200]
 		,freeze_time_ms = [0]
 		,thr_init = [1]
 		,thr_init_dev = [0.5]
 		,refractory=[1]
-        ,learning_algorithm=['critical']
+        ,learning_algorithm=['None']
         ,topology = ['small-world']
         ,lr_critical = [0.1]
-        ,macrocolumnShape=[[4,4,4]]
+        ,macrocolumnShape=[[1,1,1],[1,1,2],[1,2,2],[2,2,2],[2,5,1],[2,2,4],[2,3,4],[2,4,4],[3,4,4],[4,4,4]]
         ,minicolumnShape=[[4,4,2]]
         ,connection_density=[0.1]
         ,adaptiveProb=[1]
@@ -82,8 +82,8 @@ if __name__ == '__main__':
 		,wmax = [1]
 		,winitmax=[0.25]
 		,winitmin=[0]
-		,cfb=[0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5]
-		,fold=[2]
+		,cfb=[1]
+		,fold=[3]
     )
 	param_values = [v for v in parameters.values()]
 
