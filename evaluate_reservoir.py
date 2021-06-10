@@ -438,30 +438,30 @@ def evaluate_reservoir(args):
     print(svm_score_input)
 
     #Confusion matrix
-    plt.rcParams.update({'font.size': 16})
+    # plt.rcParams.update({'font.size': 16})
 
     predictions = clf.predict(X_test)
-    ax = skplt.metrics.plot_confusion_matrix(Y_test, predictions, normalize=True)
-    plt.savefig('reservoir'+'confusion'+'.svg')
-    plt.clf()
-    #ROC curve
-    plt.rcParams.update({'font.size': 14})
-    predicted_probas = clf.predict_proba(X_test)
-    ax2 = skplt.metrics.plot_roc(Y_test, predicted_probas)
-    plt.savefig('reservoir'+'roc'+'.svg')
-    plt.clf()
+    # ax = skplt.metrics.plot_confusion_matrix(Y_test, predictions, normalize=True)
+    # plt.savefig('reservoir'+'confusion'+'.svg')
+    # plt.clf()
+    # #ROC curve
+    # plt.rcParams.update({'font.size': 14})
+    # predicted_probas = clf.predict_proba(X_test)
+    # ax2 = skplt.metrics.plot_roc(Y_test, predicted_probas)
+    # plt.savefig('reservoir'+'roc'+'.svg')
+    # plt.clf()
 
-    plt.rcParams.update({'font.size': 16})
-    predictions = clf_input.predict(X_input_test)
-    ax = skplt.metrics.plot_confusion_matrix(Y_input_test, predictions, normalize=True)
-    plt.savefig('encoder_baseline'+'confusion'+'.svg')
-    plt.clf()
-    plt.rcParams.update({'font.size': 14})
-    #ROC curve
-    predicted_probas = clf_input.predict_proba(X_input_test)
-    ax2 = skplt.metrics.plot_roc(Y_input_test, predicted_probas)
-    plt.savefig('encoder_baseline'+'roc'+'.svg')
-    plt.clf()
+    # plt.rcParams.update({'font.size': 16})
+    # predictions = clf_input.predict(X_input_test)
+    # ax = skplt.metrics.plot_confusion_matrix(Y_input_test, predictions, normalize=True)
+    # plt.savefig('encoder_baseline'+'confusion'+'.svg')
+    # plt.clf()
+    # plt.rcParams.update({'font.size': 14})
+    # #ROC curve
+    # predicted_probas = clf_input.predict_proba(X_input_test)
+    # ax2 = skplt.metrics.plot_roc(Y_input_test, predicted_probas)
+    # plt.savefig('encoder_baseline'+'roc'+'.svg')
+    # plt.clf()
 
 
     nbsynapses = len(m.S)
