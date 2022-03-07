@@ -2,3 +2,5 @@ __pycache__
 .DS_Store
 .ipynb_checkpoints
 accuracy_log*.csv
+init
+tmp

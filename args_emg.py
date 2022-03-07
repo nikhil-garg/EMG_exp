@@ -56,20 +56,20 @@ def args():
 
     parser.add_argument(
         "--learning_algorithm",
-        default="none",
+        default="critical",
         type=str,
         help="Unsupervised Learning algorithm for reservoir"
              "e.g. critical,stdp,none ",
     )
     parser.add_argument(
         "--stdp_tau",
-        default=10,
+        default=25,
         type=float,
         help="Tau pre for STDP in ms" "e.g. 10, 20 etc.",
     )
     parser.add_argument(
         "--stdp_apre",
-        default=1e-4,
+        default=1e-3,
         type=float,
         help="dApre for STDP" "e.g. 1e-4, 1e-2 etc",
     )
@@ -89,28 +89,28 @@ def args():
 
     parser.add_argument(
         "--topology",
-        default="custom",
+        default="small-world",
         type=str,
-        help="Reservoir topology" "e.g. random,small-world ",
+        help="Reservoir topology" "e.g. random,custom,small-world ",
     )
 
     parser.add_argument(
         "--macrocolumnShape",
-        default=[4, 4, 4],
+        default=[2, 5, 1],
         # type=str,
         help=" Macrocolumn Shape ",
     )
 
     parser.add_argument(
         "--minicolumnShape",
-        default=[2, 2, 1],
+        default=[4, 4, 2],
         # type=str,
         help=" Minicolumn Shape ",
     )
 
     parser.add_argument(
         "--connection_density",
-        default=0.3,
+        default=0.1,
         type=float,
         help="p_max of reservoir connections" "e.g. 0.1, 0.9 ",
     )
@@ -130,19 +130,19 @@ def args():
 
     parser.add_argument(
         "--winitmax",
-        default=1,
+        default=0.25,
         type=float,
         help="Max init weight of reservoir connections" "e.g. 1, 0.9 ",
     )
     parser.add_argument(
         "--winitmin",
-        default=1,
+        default=0,
         type=float,
         help="Min init weight of reservoir connections" "e.g. 0.1, 0.01 ",
     )
     parser.add_argument(
         "--win",
-        default='1',
+        default='1 * rand()',
         type=str,
         help="Input weights" "e.g. 0.1, 0.01 ",
     )
@@ -192,13 +192,13 @@ def args():
     )
     parser.add_argument(
         "--init_thr_dev",
-        default=0,
+        default=0.5,
         type=float,
         help="Deviation in initial threshold (between 0 and 1) ",
     )
     parser.add_argument(
         "--refractory",
-        default=2,
+        default=1,
         type=float,
         help="Refractory period of reservoir neurons ",
     )
@@ -212,21 +212,21 @@ def args():
 
     parser.add_argument(
         "--freeze_time_ms",
-        default=1,
+        default=0,
         type=float,
         help="Time for which synaptic transmission should be frozen for weight update. (Hardware constraint)",
     )
 
     parser.add_argument(
         "--tstart",
-        default=0,
+        default=600,
         type=float,
         help="Time point from which the simulated sub-segment(of length tstep) is used as a feature for readout layer" ">0 (in ms).",
     )
 
     parser.add_argument(
         "--tlast",
-        default=1800,
+        default=1200,
         type=float,
         help="Time point till which the simulated sub-segment(of length tstep) is used as a feature for readout layer" "e.g. <1800> (in ms).",
     )
@@ -252,7 +252,7 @@ def args():
 
     parser.add_argument(
         "--input_connection_density",
-        default=0.3,
+        default=0.15,
         type=float,
         help="Connection density of input synapses relative to reservoir. (0-1)",
     )
@@ -269,7 +269,7 @@ def args():
                         help='Time step for brian2 simulation'
                                'e.g. 1, 2, etc in ms ')
 
-    parser.add_argument('--fold', default=3, type=float,
+    parser.add_argument('--fold', default=1, type=float,
                         help='Fold for train/test'
                              'e.g. 1, 2, 3 ')
     parser.add_argument('--classes_dict', default=["rock", "paper", "scissor"], 

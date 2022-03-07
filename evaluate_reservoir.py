@@ -492,7 +492,7 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
 
     # Fix the seed of all random number generator
-    seed = 500
+    seed = 50
     random.seed(seed)
     np.random.seed(seed)
 
