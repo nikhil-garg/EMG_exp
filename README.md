@@ -21,6 +21,11 @@ Requirements can be installed with : ```pip3 install -r requirements.txt```
   
 Please note that the requirement file might use outdated dependencies. To get latest versions : ```pip3 install numpy pandas matplotlib scipy scikit_learn scikit_plot nni seaborn Brian2```
 
+Finally, make sure the source of the project is in the Python path.  
+- On linux : `export PYTHONPATH="$PWD/src"`
+- On windows : `set PYTHONPATH="$PWD/src"`
+You can also modify it permanently, see [here](https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html).
+
 
 # Usage
 
@@ -34,18 +39,18 @@ Different datasets for Electromyography (EMG) are provided in the folder `datase
 ### Spike encoder & Evaluation baseline 
 This is the first pipeline described in the paper. To execute it : 
 ```
-python3 -m evaluate_encoder [options]
+python3 src/evaluate_encoder.py [options]
 ```
 ### Reservoir
 This is the second pipeline described in the paper. To execute it :
 ```
-python3 -m evaluate_reservoir [options] 
+python3 src/evaluate_reservoir.py [options] 
 ```
 
 ## Parameters
-All the parameters are listed and detailed in the file `args_emg.py`. They can be specified as follow : 
+All the parameters are listed and detailed in the file `src/args_emg.py`. They can be specified as follow : 
 ```
-python3 -m <<script>> --dataset="5_class" --learning_algorithm="critical" --cbf=1
+python3 <<script>> --dataset="5_class" --learning_algorithm="critical" --cbf=1
 ```
 
 ## Scripting
