@@ -24,6 +24,7 @@ Please note that the requirement file might use outdated dependencies. To get la
 Finally, make sure the source of the project is in the Python path.  
 - On linux : `export PYTHONPATH="$PWD/src"`
 - On windows : `set PYTHONPATH="$PWD/src"`
+
 You can also modify it permanently, see [here](https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html).
 
 
