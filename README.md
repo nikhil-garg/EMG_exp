@@ -1,6 +1,6 @@
 # EMG experiments
 
-This is the code for the paper **Signals to Spikes for Neuromorphic Regulated Reservoir Computing and EMG Hand Gesture Recognition**, available [here](https://arxiv.org/pdf/2106.11169.pdf).
+This is the code for the paper *Signals to Spikes for Neuromorphic Regulated Reservoir Computing and EMG Hand Gesture Recognition*, available [here](https://arxiv.org/pdf/2106.11169.pdf).
 
 
 # Getting started
@@ -19,16 +19,16 @@ This is the code for the paper **Signals to Spikes for Neuromorphic Regulated Re
 ## Installation
 Requirements can be installed with : ```pip3 install -r requirements.txt```
   
-Please note that the requirement file might use outdated dependencies. Latest versions can be install manually with : ```pip3 install numpy pandas matplotlib scipy scikit_learn scikit_plot nni seaborn Brian2```
+Please note that the requirement file might use outdated dependencies. To get latest versions : ```pip3 install numpy pandas matplotlib scipy scikit_learn scikit_plot nni seaborn Brian2```
 
 
 # Usage
 
 ## Datasets
-Different datasets for Electromyography (EMG) are provided in the folder `datasets` :
-- Roshambo **(classes: rock, paper, scissor)**
-- 5_class : **(classes: pinky, elle, yo, index, thumb)**
-- Pinch : **(classes: Pinch1, Pinch2, Pinch3, Pinch4)**
+Different datasets for Electromyography (EMG) are provided in the folder `datasets/` :
+- Roshambo *(classes: rock, paper, scissor)*
+- 5_class *(classes: pinky, elle, yo, index, thumb)*
+- Pinch *(classes: Pinch1, Pinch2, Pinch3, Pinch4)*
 
 ## Pipelines
 ### Spike encoder & Evaluation baseline 
@@ -76,10 +76,10 @@ lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_
 
 # Reproduce the results
 
-Experiments presented in the paper can be reproduced by executing the files in the folder `experiments`. For instance : 
+Experiments presented in the paper can be reproduced by executing the files in the folder `experiments/` :
 ```python3 -m experiments.experiment_exploration_v10```
-For Spike encoder & Evaluation baseline, use the file `baseline_exploration.py`.  
-For Reservoir, use the files : `experiment_exploration_vX.py`.
+
+*Note that Spike encoder & Evaluation baseline is only used in the file `experiments/baseline_exploration.py`.*
 
 ## Best results 
 ### Spike encoder & Evaluation baseline
