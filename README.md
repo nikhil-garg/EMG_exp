@@ -17,9 +17,15 @@ This is the code for the paper *Signals to Spikes for Neuromorphic Regulated Res
 - Brian2
 
 ## Installation
-Requirements can be installed with : ```pip3 install -r requirements.txt```
+Requirements can be installed with : 
+```
+pip3 install -r requirements.txt
+```
   
-Please note that the requirement file might use outdated dependencies. To get latest versions : ```pip3 install numpy pandas matplotlib scipy scikit_learn scikit_plot nni seaborn Brian2```
+Please note that the requirement file might use outdated dependencies. To get latest versions : 
+```
+pip3 install numpy pandas matplotlib scipy scikit_learn scikit_plot nni seaborn Brian2
+```
 
 Finally, make sure the source of the project is in the Python path.  
 - On Linux : `export PYTHONPATH="$PWD/src"`
@@ -82,8 +88,10 @@ lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_
 
 # Reproduce the results
 
-Experiments presented in the paper can be reproduced by executing the files in the folder `experiments/` :
-```python3 -m experiments.experiment_exploration_v10```
+Experiments presented in the paper can be reproduced by executing the files in the folder `experiments/` : 
+```
+python3 -m experiments.experiment_exploration_v10
+```
 
 *Note that Spike encoder & Evaluation baseline is only used in the file `experiments/baseline_exploration.py`.*
 
@@ -95,7 +103,10 @@ TODO
 TODO
 ### Reservoir
 #### Roshambo dataset
-Default parameters reproduce the best results for Roshambo dataset : `python3 -m evaluate_reservoir`
+Default parameters reproduce the best results for Roshambo dataset : 
+```
+python3 -m src.evaluate_reservoir
+```
 #### 5_class
 TODO
 
