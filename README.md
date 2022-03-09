@@ -22,10 +22,10 @@ Requirements can be installed with : ```pip3 install -r requirements.txt```
 Please note that the requirement file might use outdated dependencies. To get latest versions : ```pip3 install numpy pandas matplotlib scipy scikit_learn scikit_plot nni seaborn Brian2```
 
 Finally, make sure the source of the project is in the Python path.  
-- On linux : `export PYTHONPATH="$PWD/src"`
-- On windows : `set PYTHONPATH="$PWD/src"`
+- On Linux : `export PYTHONPATH="$PWD/src"`
+- On Windows : `set PYTHONPATH="$PWD/src"`
 
-You can also modify it permanently, see [here](https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html).
+You can also modify it permanently : see [here](https://bic-berkeley.github.io/psych-214-fall-2016/using_pythonpath.html).
 
 
 # Usage
@@ -55,7 +55,7 @@ python3 <<script>> --dataset="5_class" --learning_algorithm="critical" --cbf=1
 ```
 
 ## Scripting
-Pipelines can be used in Python scripts :
+Pipelines can also be used in Python scripts :
 ```python
 import random
 import numpy as np
@@ -73,7 +73,7 @@ random.seed(seed)
 np.random.seed(seed)
 
 # Spike encoding & Evaluation baseline
-svm_score,firing_rate,svm_score_baseline = evaluate_encoder(args)
+svm_score_enc,firing_rate_enc,svm_score_baseline_enc = evaluate_encoder(args)
 
 # Reservoir 
 lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_score_input,firing_rate,nbsynapses,nbneurons = evaluate_reservoir(args)
