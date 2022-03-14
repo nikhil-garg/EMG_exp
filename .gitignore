@@ -4,3 +4,6 @@ __pycache__
 accuracy_log*.csv
 init
 tmp
+spike_data.npz
+plots/*
+!plots/.keep 

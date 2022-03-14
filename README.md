@@ -88,31 +88,17 @@ lda_score,lda_score_input,svm_linear_score,svm_linear_score_input,svm_score,svm_
 
 # Reproduce the results
 
-Experiments presented in the paper can be reproduced by executing the files in the folder `experiments/` : 
+Experiments presented in the paper can be reproduced by executing the files in the folder `experiments/`. These files are for parameter exploration : a grid search algorithm is used to test different combinations of parameters. A file can be executed with : 
 ```
 python3 -m experiments.experiment_exploration_v10
 ```
 
-*Note that Spike encoder & Evaluation baseline is only used in the file `experiments/baseline_exploration.py`.*
 
 ## Best results 
-### Spike encoder & Evaluation baseline
-#### Roshambo dataset
-TODO
-#### 5_class
-TODO
-### Reservoir
-#### Roshambo dataset
-Default parameters reproduce the best results for Roshambo dataset : 
-```
-python3 -m src.evaluate_reservoir
-```
-#### 5_class
-TODO
+Default parameters reproduce the best results presented in the paper. Note that a reservoir with 320 neurons is used for a 3 class problem, and 2048 neurons for a 5 class problem. Hence, for 5_class dataset, macro column shape must be modified to `[4,4,4]`.
 
 
 # Acknowledgements 
-TODO.  
 University of Sherbrooke. [NEuro COmputational & Intelligent Signal Processing Research Group (NECOTIS)](http://www.gel.usherbrooke.ca/necotis/)
 
 <img src="data/necotis.png" width="250" /> <img src="data/UdeS.jpg" width="250" />
