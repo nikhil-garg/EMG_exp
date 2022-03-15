@@ -1,3 +1,0 @@
-dataset,encode_thr_up,encode_thr_dn,encode_refractory,encode_interpfact,firing_rate,svm_score,svm_score_baseline,fold
-roshambo,3.0,3.0,10.0,5.0,3.6325000000000003,0.6466666666666666,0.5726666666666667,1.0
-roshambo,3.0,3.0,10.0,5.0,3.6557291666666667,0.6313333333333333,0.582,2.0

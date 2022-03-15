@@ -7,4 +7,3 @@ scikit_plot==0.3.7
 numpy==1.18.5
 nni==1.8
 scikit_learn==0.24.1
-scikitplot==0.1.1

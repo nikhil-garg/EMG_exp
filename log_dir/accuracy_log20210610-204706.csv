@@ -1,2 +1,0 @@
-dataset,encode_thr_up,encode_thr_dn,encode_refractory,encode_interpfact,firing_rate,svm_score,svm_score_baseline,fold
-5_class,0.5,0.5,1.0,5.0,124.43354166666667,0.6201904761904762,0.31352380952380954,1.0
